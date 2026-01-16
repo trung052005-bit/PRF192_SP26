@@ -15,15 +15,15 @@ int main() {
 
     // Phép cộng
     kq = a + b;
-    printf("%d + %d = %d\n", a, b, kq);
+    printf("%d + %d = %.0f\n", a, b, kq);
 
     // Phép trừ
     kq = a - b;
-    printf("%d - %d = %d\n", a, b, kq);
+    printf("%d - %d = %.0f\n", a, b, kq);
 
     // Phép nhân
     kq = a * b;
-    printf("%d * %d = %d\n", a, b, kq);
+    printf("%d * %d = %.0f\n", a, b, kq);
 
     // Phép chia (ra số thực)
     kq_chia = (float)a / b;
