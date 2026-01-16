@@ -2,13 +2,12 @@
 
 int main() {
     int day, month, year;
-    // �?c d?nh d?ng dd/mm/yyyy (v� d?: 12/1/2025)
+    // Đọc định dạng dd/mm/yyyy (ví dụ: 12/1/2025)
     if (scanf("%d/%d/%d", &day, &month, &year) != 3) {
-        return 1; // l?i nh?p
+        return 1; // lỗi nhập
     }
 
-    // In ra v?i th�ng/ ng�y c� 2 ch? s?
+    // In ra với tháng/ ngày có 2 chữ số
     printf("%02d/%02d/%d\n", day, month, year);
     return 0;
 }
-
