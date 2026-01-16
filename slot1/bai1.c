@@ -1,21 +1,33 @@
 #include <stdio.h>
 
 int main() {
-    char name[50];
-    int age;
+    int a, b;
+    char pt;
 
-    // Nhập tên
-    printf("Nhap ten cua ban: ");
-    fgets(name, sizeof(name), stdin);
+    // Nhập hai số nguyên
+    printf("Nhap a, b: ");
+    scanf("%d %d", &a, &b);
 
-    // Nhập tuổi
-    printf("Nhap tuoi cua ban: ");
-    scanf("%d", &age);
+    // Nhập phép toán (dùng char)
+    printf("Nhap phep toan (+, -, *, /): ");
+    scanf(" %c", &pt); // thêm khoảng trắng để bỏ ký tự Enter
 
-    // In ra kết quả
-    printf("\nThong tin cua ban:\n");
-    printf("Ten: %s", name);
-    printf("Tuoi: %d\n", age);
+    if (pt == '+') {
+        printf("%d + %d = %d\n", a, b, a + b);
+    } else if (pt == '-') {
+        printf("%d - %d = %d\n", a, b, a - b);
+    } else if (pt == '*') {
+        printf("%d * %d = %d\n", a, b, a * b);
+    } else if (pt == '/') {
+        if (b == 0) {
+            printf("Khong the chia cho 0\n");
+        } else {
+            printf("%d / %d = %.2f\n", a, b, (double)a / b);
+        }
+    } else {
+        printf("Phep toan khong hop le\n");
+    }
 
     return 0;
 }
+
