@@ -1,24 +1,32 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #include <ctype.h>
-struct Point {
-    int x;
-    int y;
-};
+int findDifference(int arr[], int n) {
+	int max = arr[0];
+	int min = arr[0];
+	for(int i = 1; i < n; i++) {
+		if(arr[i] > max) max = arr[i];
+		if(arr[i] < min) min = arr[i];
+	}
+	return (max - min);
+}
 int main() {
   system("cls");
   printf("INPUT:\n");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
-  struct Point p1;
-    p1.x = 5;
-    p1.y = 10;
+    int n;
+  scanf("%d", &n);
+  int a[100];
+  for(int i = 0; i < n; i++) {
+      scanf("%d", &a[i]);
+  }
   // Fixed Do not edit anything here.
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
-    printf("Diem p1: (%d, %d)\n", p1.x, p1.y);
+ int diff = findDifference(a, n);
+  printf("%d", diff);
   //--FIXED PART - DO NOT EDIT ANY THINGS HERE
   printf("\n");
   system ("pause");
